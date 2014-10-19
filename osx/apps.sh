@@ -21,6 +21,7 @@ apps=(
   sketch
   quicklook-json
   skype
+  java7
 )
 
 # Specify the location of the apps
