@@ -1,3 +1,15 @@
+# Export PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
+
+# Put brew's ruby with rbenv in front via `rbenv init -`
+eval "$(rbenv init -)"
+
+# Use gnu tools instead
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+
+# Added by the Heroku Toolbelt
+export PATH=/usr/local/heroku/bin:$PATH
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -12,6 +24,3 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
-
-# Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
