@@ -407,26 +407,26 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Transmission.app                                                            #
 ###############################################################################
 
-echo ""
-echo "Use `~/Downloads/Incomplete` to store incomplete downloads"
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
-
-echo ""
-echo "Don't prompt for confirmation before downloading"
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-echo ""
-echo "Trash original torrent files"
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-echo ""
-echo "Hide the donate message"
-defaults write org.m0k.transmission WarningDonate -bool false
-
-echo ""
-echo "Hide the legal disclaimer"
-defaults write org.m0k.transmission WarningLegal -bool false
+# echo ""
+# echo "Use `~/Downloads/Incomplete` to store incomplete downloads"
+# defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
+# defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
+#
+# echo ""
+# echo "Don't prompt for confirmation before downloading"
+# defaults write org.m0k.transmission DownloadAsk -bool false
+#
+# echo ""
+# echo "Trash original torrent files"
+# defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+#
+# echo ""
+# echo "Hide the donate message"
+# defaults write org.m0k.transmission WarningDonate -bool false
+#
+# echo ""
+# echo "Hide the legal disclaimer"
+# defaults write org.m0k.transmission WarningLegal -bool false
 
 
 ###############################################################################
@@ -462,23 +462,23 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 ###############################################################################
 # Sublime Text
 ###############################################################################
-echo ""
-echo "Do you use Sublime Text 3 as your editor of choice and is it installed?"
-select yn in "Yes" "No"; do
-  case $yn in
-    Yes ) echo ""
-        echo "Linking Sublime Text command line"
-        ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-        echo ""
-        echo "Setting Git to use Sublime Text as default editor"
-        git config --global core.editor "subl -n -w"
-        echo ""
-        echo "Removing Mission Control as it interferes with Sublime Text keyboard shortcut for selecting multiple lines"
-        defaults write com.apple.dock mcx-expose-disabled -bool TRUE
-        break;;
-    No ) break;;
-  esac
-done
+# echo ""
+# echo "Do you use Sublime Text 3 as your editor of choice and is it installed?"
+# select yn in "Yes" "No"; do
+#   case $yn in
+#     Yes ) echo ""
+#         echo "Linking Sublime Text command line"
+#         ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+#         echo ""
+#         echo "Setting Git to use Sublime Text as default editor"
+#         git config --global core.editor "subl -n -w"
+#         echo ""
+#         echo "Removing Mission Control as it interferes with Sublime Text keyboard shortcut for selecting multiple lines"
+#         defaults write com.apple.dock mcx-expose-disabled -bool TRUE
+#         break;;
+#     No ) break;;
+#   esac
+# done
 
 
 ###############################################################################
@@ -499,6 +499,6 @@ echo ""
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
   "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-  "Terminal" "Transmission"; do
+  "Terminal"; do
   killall "${app}" > /dev/null 2>&1
 done
