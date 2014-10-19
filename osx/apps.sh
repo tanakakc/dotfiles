@@ -19,14 +19,13 @@ apps=(
   mailbox
   evernote-beta
   sketch
-  font-m-plus
   quicklook-json
   skype
 )
 
 # Specify the location of the apps
 appdir="/Applications"
-caskroom="/user/local/Caskroom"
+caskroom="/usr/local/Caskroom"
 
 # Check for Homebrew
 if test ! $(which brew); then
