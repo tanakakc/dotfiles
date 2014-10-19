@@ -1,8 +1,3 @@
-#.bash_profile
-if [ -f ~/.bashrc ]; then
-. ~/.bashrc
-fi
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -17,3 +12,6 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
+
+# Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

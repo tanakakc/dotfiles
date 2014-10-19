@@ -32,6 +32,7 @@ binaries=(
   rbenv
   ruby-build
   rbenv-gemset
+  heroku-toolbelt
 )
 
 # Install the binaries
