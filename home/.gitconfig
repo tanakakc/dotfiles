@@ -1,0 +1,19 @@
+[user]
+	name = Keishi Tanaka
+	email = kc@hokuken.com
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
+	st = status
+	pr = pull-request
+	l = log --graph --decorate
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = matching
+[color]
+	ui = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
