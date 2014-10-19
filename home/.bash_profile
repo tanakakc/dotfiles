@@ -27,3 +27,6 @@ fi;
 
 # Specify your defaults in this environment variable
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
+
+# Remove .localized and .DS_Store
+find . -name .localized -delete && find . -name .DS_Store -delete
