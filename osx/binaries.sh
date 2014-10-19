@@ -33,6 +33,7 @@ binaries=(
   ruby-build
   rbenv-gemset
   rbenv-default-gems
+  rbenv-gem-rehash
   heroku-toolbelt
 )
 
