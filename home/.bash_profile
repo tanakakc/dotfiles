@@ -11,7 +11,7 @@ export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 export PATH=/usr/local/heroku/bin:$PATH
 
 # nvm Setting
-[ -e ~/.nvm ] || source $(brew --prefix nvm)/nvm.sh
+source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR=~/.nvm
 
 # Load the shell dotfiles, and then some:
