@@ -35,6 +35,7 @@ binaries=(
   rbenv-default-gems
   rbenv-gem-rehash
   heroku-toolbelt
+  nodebrew
 )
 
 # Install the binaries
