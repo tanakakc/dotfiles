@@ -22,6 +22,7 @@ apps=(
   quicklook-json
   skype
   java7
+  coda
 )
 
 # Specify the location of the apps
