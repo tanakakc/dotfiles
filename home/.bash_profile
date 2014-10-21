@@ -10,6 +10,9 @@ export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 # Added by the Heroku Toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
 
+# Export nodebrew's node PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
