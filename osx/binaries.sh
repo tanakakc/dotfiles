@@ -36,6 +36,7 @@ binaries=(
   rbenv-gem-rehash
   heroku-toolbelt
   nodebrew
+  ngrok
 )
 
 # Install the binaries
