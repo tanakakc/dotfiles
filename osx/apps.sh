@@ -52,7 +52,13 @@ main() {
 
   # install apps
   echo "installing apps..."
-  brew cask install --appdir=$appdir --caskroom=$caskroom ${apps[@]}
+  for app in ${apps[@]}; do
+    if brew cask list -1 | grep -q "^${app}"; then
+      echo "Skip: brew cask install ${app}"
+    else
+      brew cask install --appdir=$appdir --caskroom=$caskroom ${apps[@]}
+    fi
+  done
 
   # install fonts
   # echo "installing fonts..."

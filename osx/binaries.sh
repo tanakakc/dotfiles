@@ -40,7 +40,13 @@ binaries=(
 )
 
 # Install the binaries
-brew install ${binaries[@]}
+for binary in ${binaries[@]}; do
+  if brew list -1 | grep -q "^$(basename $binary)"; then
+    echo "Skip: brew install ${binary}"
+  else
+    brew install ${binary}
+  fi
+done
 
 # Remove outdated versions from the cellar
 brew cleanup
