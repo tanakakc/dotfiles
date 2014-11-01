@@ -9,6 +9,7 @@ apps=(
   alfred
   dropbox
   google-chrome
+  google-japanese-ime
   slack-beta
   firefox
   vagrant
@@ -56,7 +57,7 @@ main() {
     if brew cask list -1 | grep -q "^${app}"; then
       echo "Skip: brew cask install ${app}"
     else
-      brew cask install --appdir=$appdir --caskroom=$caskroom ${apps[@]}
+      brew cask install --appdir=$appdir --caskroom=$caskroom ${app}
     fi
   done
 
