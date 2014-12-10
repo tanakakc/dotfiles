@@ -8,6 +8,7 @@
 	st = status
 	pr = pull-request
 	l = log --graph --decorate
+	fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
 [core]
 	excludesfile = ~/.gitignore_global
 [push]
@@ -17,3 +18,5 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[heroku]
+	account = tanakakc
