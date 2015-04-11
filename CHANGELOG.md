@@ -2,6 +2,7 @@
 
 - Add fetch-pulls alias to .gitconfig
 - Fix app.sh
+- Add 'appcleaner' to install apps
 
 
 ## v1.0 (November 6, 2014)
