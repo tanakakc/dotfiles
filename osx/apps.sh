@@ -30,20 +30,16 @@ apps=(
 appdir="/Applications"
 caskroom="/usr/local/Caskroom"
 
-# Check for Homebrew
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
 main() {
 
   # Ensure homebrew is installed
   homebrew
 
   # Install homebrew-cask
-  echo "installing cask..."
-  brew install caskroom/cask/brew-cask
+  if ! brew cask; then
+    echo "installing cask..."
+    brew install caskroom/cask/brew-cask
+  fi
 
   # Tap alternative versions
   brew tap caskroom/versions
