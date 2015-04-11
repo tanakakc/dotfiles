@@ -24,6 +24,7 @@ apps=(
   skype
   java7
   coda
+  appcleaner
 )
 
 # Specify the location of the apps
