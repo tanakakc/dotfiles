@@ -4,6 +4,7 @@
 - Fix app.sh
 - Add 'appcleaner' to install apps
 - Update .gemrc
+- Add .vimrc
 
 
 ## v1.0 (November 6, 2014)
