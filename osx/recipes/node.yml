@@ -1,0 +1,46 @@
+brew:
+  enable_update: false
+  enable_upgrade: false
+  add_repositories:
+    - caskroom/cask
+    - caskroom/fonts
+    - caskroom/versions
+    - homebrew/dupes
+    - homebrew/php
+  install_packages:
+    - git
+    - hub
+    - trash
+    - rbenv
+    - ruby-build
+    - rbenv-gemset
+    - rbenv-default-gems
+    - rbenv-gem-rehash
+    - heroku-toolbelt
+    - nodebrew
+    - ngrok
+    - php55
+    - composer
+    - boot2docker
+    - docker
+  install_apps:
+    - alfred
+    - appcleaner
+    - atom
+    - coda
+    - dropbox
+    - firefox
+    - flash
+    - google-chrome
+    - google-japanese-ime
+    - iterm2
+    - java7
+    - licecap
+    - mailbox
+    - messenger
+    - quicklook-json
+    - skype
+    - slack
+    - utorrent
+    - vagrant
+    - virtualbox
